@@ -62,7 +62,7 @@
             bindings = <&kp COLON>, <&kp SEMICOLON>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };
 
@@ -194,10 +194,10 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&kp TAB        &kp B  &kp L  &kp D  &kp C      &kp V        &kp J             &kp F            &kp O    &kp U    &kp COMMA  &kp BACKSPACE
-&mt LCTRL ESC  &kp N  &kp R  &kp T  &kp S      &kp G        &kp P             &kp H            &kp A    &kp E    &kp I      &trans
-&kp RIGHT_ALT  &kp X  &kp Q  &kp M  &kp W      &kp Z        &kp K             &kp F            &kp SQT  &kp DOT  &kp FSLH   &kp RSHFT
-                             &mo 1  &kp RCTRL  &kp SPACE    &mt LEFT_GUI RET  &kp RIGHT_SHIFT  &mo 2
+&kp TAB        &kp B  &kp L  &kp D  &kp C   &kp V        &kp J             &kp F          &kp O    &kp U                  &kp COMMA   &trans
+&mt LCTRL ESC  &kp N  &kp R  &kp T  &kp S   &kp G        &kp P             &kp H          &kp A    &kp E                  &kp I       &trans
+&kp RIGHT_ALT  &kp X  &kp Q  &kp M  &kp W   &kp Z        &kp K             &kp F          &kp SQT  &switch_colon_semicol  &kp PERIOD  &kp RSHFT
+                             &mo 1  &tog 3  &kp SPACE    &mt LEFT_GUI RET  &kp BACKSPACE  &mo 2
             >;
         };
 
@@ -228,30 +228,30 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &kp EXCL  &kp AT          &kp HASH        &kp DLLR         &kp PRCNT    &kp CARET  &kp AMPS   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SLASH  &trans
-&trans  &trans    &trans          &kp UP_ARROW    &trans           &kp GRAVE    &kp MINUS  &kp EQUAL  &kp LBKT              &kp RBKT               &kp BSLH   &trans
-&trans  &trans    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp TILDE    &kp PLUS   &kp ASTRK  &kp LBRC              &kp RBRC               &kp PIPE   &trans
-                                  &trans          &trans           &trans       &trans     &trans     &trans
+&trans  &trans  &kp AT  &kp HASH      &kp DLLR   &kp PRCNT    &kp DOLLAR   &kp AMPS   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SLASH             &trans
+&trans  &trans  &trans  &kp PLUS      &kp MINUS  &kp GRAVE    &kp UNDER    &kp EQUAL  &kp LBKT              &kp RBKT               &kp PIPE              &trans
+&trans  &trans  &trans  &kp ASTERISK  &kp CARET  &kp TILDE    &kp AT_SIGN  &kp HASH   &kp LBRC              &kp RBRC               &kp NON_US_BACKSLASH  &trans
+                        &trans        &trans     &trans       &trans       &trans     &trans
             >;
         };
 
         ADJ {
             display-name = "System";
             bindings = <
-&trans  &kp F1        &kp F2        &kp F3        &kp F4      &kp F5            &kp F6  &kp F7  &kp F8  &kp F9  &kp F10      &trans
-&trans  &kp F11       &kp F12       &trans        &trans      &studio_unlock    &trans  &trans  &trans  &trans  &trans       &trans
-&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_CLR  &bt BT_CLR_ALL    &trans  &trans  &trans  &trans  &bootloader  &trans
-                                    &trans        &trans      &trans            &trans  &trans  &trans
+&trans  &kp F1        &kp F2        &kp F3        &kp F4        &kp F5            &kp F6  &kp F7  &kp F8  &kp F9          &kp F10      &trans
+&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5            &trans  &trans  &trans  &trans          &trans       &trans
+&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_CLR    &bt BT_CLR_ALL    &trans  &trans  &trans  &studio_unlock  &bootloader  &trans
+                                    &trans        &trans        &trans            &trans  &trans  &trans
             >;
         };
 
         EXTRA {
             display-name = "extra";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans       &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans       &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &bootloader  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans       &trans
+&trans  &trans  &trans  &trans  &trans  &studio_unlock    &trans  &trans  &trans  &trans  &trans       &trans
+&trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &bootloader  &trans
+                        &trans  &trans  &trans            &trans  &trans  &trans
             >;
         };
     };
