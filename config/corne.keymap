@@ -212,9 +212,9 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&trans      &bl BL_INC  &trans  &trans     &kp PG_UP      &trans       &mmv MOVE_LEFT  &mmv MOVE_UP    &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans  &trans
-&caps_word  &bl BL_DEC  &trans  &mkp MCLK  &mkp LCLK      &mkp RCLK    &kp H           &kp J           &kp K           &kp L            &trans  &trans
-&trans      &bl BL_TOG  &trans  &trans     &kp PAGE_DOWN  &trans       &kp LEFT        &kp DOWN_ARROW  &kp UP_ARROW    &kp RIGHT        &trans  &trans
+&trans      &bl BL_INC  &trans  &trans     &kp PG_UP      &trans       &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans  &trans
+&caps_word  &bl BL_DEC  &trans  &mkp MCLK  &mkp LCLK      &mkp RCLK    &kp H           &kp J           &kp K         &kp L            &trans  &trans
+&trans      &bl BL_TOG  &trans  &trans     &kp PAGE_DOWN  &trans       &kp LEFT        &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT        &trans  &trans
                                 &trans     &trans         &trans       &trans          &trans          &trans
             >;
         };
