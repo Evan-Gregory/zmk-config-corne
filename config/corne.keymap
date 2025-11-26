@@ -229,9 +229,9 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &kp EXCL  &kp AT          &kp HASH        &kp DLLR         &kp PRCNT    &kp CARET  &kp AMPS   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SLASH  &trans
-&trans  &trans    &trans          &kp UP_ARROW    &trans           &kp GRAVE    &kp MINUS  &kp EQUAL  &kp LBKT              &kp RBKT               &kp BSLH   &trans
-&trans  &trans    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp TILDE    &kp PLUS   &kp ASTRK  &kp LBRC              &kp RBRC               &kp PIPE   &trans
+&trans  &kp EXCL  &kp AT          &kp HASH        &kp DLLR         &kp PRCNT    &kp CARET  &kp AMPS   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SLASH             &trans
+&trans  &trans    &trans          &kp UP_ARROW    &trans           &kp GRAVE    &kp MINUS  &kp EQUAL  &kp LBKT              &kp RBKT               &kp PIPE              &trans
+&trans  &trans    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp TILDE    &kp PLUS   &kp ASTRK  &kp LBRC              &kp RBRC               &kp NON_US_BACKSLASH  &trans
                                   &trans          &trans           &trans       &trans     &trans     &trans
             >;
         };
